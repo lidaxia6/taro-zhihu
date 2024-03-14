@@ -22,7 +22,7 @@ import {
   ConfigProvider,
   SearchBar,
 } from "@nutui/nutui-react-taro";
-import { ArrowLeft, Close } from "@nutui/icons-react-taro";
+import { ArrowLeft, Close, Video } from "@nutui/icons-react-taro";
 import Taro from "@tarojs/taro";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -37,11 +37,24 @@ export default function Index() {
     return () => {};
   }, []);
 
+  const [source, setSource] = useState({
+    src: "https://storage.360buyimg.com/nutui/video/video_NutUI.mp4",
+    type: "video/mp4",
+  });
+  const options = {
+    autoplay: true,
+    muted: true,
+    controls: true,
+  };
+  const play = (elm) => console.log("play", elm);
+  const pause = (elm) => console.log("pause", elm);
+  const playend = (elm) => console.log("playend", elm);
+
   const onShareToWechatFriend = () => {
     Taro.updateShareMenu({
       withShareTicket: true,
-      success () { }
-    })
+      success() {},
+    });
   };
 
   return (
@@ -85,6 +98,16 @@ export default function Index() {
       {/* Tabs */}
       <div className="main">
         文章详情
+        <div>
+          <Video
+            source={source}
+            options={options}
+            onPlay={play}
+            onPause={pause}
+            onPlayEnd={playend}
+            style={{ height: "163px", width: "100%" }}
+          />
+        </div>
         <div
           style={{
             display: "flex",
