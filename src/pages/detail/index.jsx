@@ -98,7 +98,7 @@ export default function Index() {
       {/* Tabs */}
       <div className="main">
         文章详情
-        <div>
+        <div style={{ }}>
           <Video
             source={source}
             options={options}
