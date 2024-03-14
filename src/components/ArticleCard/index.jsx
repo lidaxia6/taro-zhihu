@@ -1,17 +1,23 @@
 import React from "react";
 import { VirtualList } from "@nutui/nutui-react-taro";
 import "./index.scss";
+import Taro from "@tarojs/taro";
+
 export default function ArticleCard() {
   const onScroll = () => {};
-
+  const handleClick = () => {
+    Taro.navigateTo({
+      url: "/pages/detail/index",
+    });
+  };
   const itemRender = (data, dataIndex) => {
     return (
-      <div className="box">
+      <div className="box" onClick={() => handleClick()}>
         <div className="rank">{data.hot} 万热度</div>
         <div className="main">
           <div className="left">{data.title}</div>
           <div className="right">
-            <img src={data.img} width={'100%'} height={'100%'} />
+            <img src={data.img} width={"90%"} height={"90%"} />
           </div>
         </div>
       </div>

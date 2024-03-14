@@ -21,6 +21,8 @@
     .left {
       width: 65%;
       height: 100%;
+      overflow: hidden; /* 隐藏超出元素框的内容 */
+      text-overflow: ellipsis; /* 在超出元素框的内容处显示省略号 */
     }
 
     .right {
