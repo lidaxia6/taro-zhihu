@@ -1,0 +1,19 @@
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navBar {
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid black;
+}
+
+.main {
+  width: 100%;
+  height: calc(100vh - 220px);
+  background-color: #fff;
+  overflow-y: scroll;
+}

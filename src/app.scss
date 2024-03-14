@@ -1,0 +1,19 @@
+:root,
+page {
+  --main-color: #5396ff;
+  --main-h1: 35px;
+  --main-h2: 32px;
+  --main-bgc: #fff;
+  --main-bgc2: #f7f8fa;
+  // Tabs
+  --nutui-tabs-titles-gap: -100px;
+  --nutui-tabs-titles-background-color: var(--main-color);
+  --nutui-tabs-titles-font-size: var(--main-h1);
+  --nutui-tabs-titles-item-active-color: #000;
+  --nutui-tabs-titles-background-color: #fff;
+  --nutui-tabs-tab-line-width: 70px;
+  --nutui-tabs-tab-line-height: 8px;
+  --nutui-tabs-tab-line-color: var(--main-color);
+  --nutui-tabs-line-bottom: 10%;
+  --nutui-tabs-titles-item-min-width: 1px;
+}

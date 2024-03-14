@@ -1,0 +1,30 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  padding: 10px;
+  margin: 10px 0;
+
+  .rank {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 24px;
+    color: rgb(124, 133, 133);
+  }
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    height: 210px;
+    font-size: var(--main-h2);
+    .left {
+      width: 65%;
+      height: 100%;
+    }
+
+    .right {
+      flex: 1;
+    }
+  }
+}
